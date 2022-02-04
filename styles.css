@@ -3,8 +3,38 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 .home {
     height: 100vh;
+    color: orange;
+}
+
+.home ul {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2%;
+}
+
+.home li {
+    font-size: 1.5em;
+    padding: 2.5%;
+}
+
+.home h1 {
+    font-size: 5em;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15%;
+    margin-top: 13%;
+}
+
+.home i {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 1.25em;
 }
