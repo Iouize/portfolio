@@ -6,9 +6,19 @@
     list-style: none;
 }
 
+img {
+    width: 100%;
+}
+
+:root {
+    --main-color : orange;
+}
+
+/*********HOME**********/
+
 .home {
     height: 100vh;
-    color: orange;
+    color: var(--main-color);
 }
 
 .home ul {
@@ -18,8 +28,12 @@
 }
 
 .home li {
-    font-size: 1.5em;
+    font-size: 1.25em;
     padding: 2.5%;
+}
+
+.home li a {
+    color : var(--main-color);
 }
 
 .home h1 {
@@ -37,4 +51,27 @@
     width: 100%;
     bottom: 0;
     font-size: 1.25em;
+}
+
+/**********QUI SUIS-JE*************/
+
+.description {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.description .illustrationLouise {
+    width: 15vw;
+}
+
+.description article {
+    width: 30vw;
+}
+
+.description h2 {
+    color : var(--main-color);
+    font-size: 2em;
+    margin-bottom: 10%;
 }
