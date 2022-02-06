@@ -6,6 +6,8 @@ const couleurs = [
 
 const couleurPrincipale = couleurs[Math.floor(Math.random()*couleurs.length)];
 
+let root = document.documentElement;
+
 window.addEventListener('DOMContentLoaded', (event) => {
-    document.querySelector('.home').style.backgroundColor = couleurPrincipale;
+    root.style.setProperty('--main-color', couleurPrincipale);
 } );
