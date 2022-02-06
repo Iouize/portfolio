@@ -11,14 +11,16 @@ img {
 }
 
 :root {
-    --main-color : orange;
+    --main-color : #B6DCB6;
+    --second-color : white;
 }
 
 /*********HOME**********/
 
 .home {
     height: 100vh;
-    color: var(--main-color);
+    background-color: var(--main-color);
+    color: var(--second-color);
 }
 
 .home ul {
@@ -33,7 +35,7 @@ img {
 }
 
 .home li a {
-    color : var(--main-color);
+    color : var(--second-color);
 }
 
 .home h1 {
@@ -74,4 +76,81 @@ img {
     color : var(--main-color);
     font-size: 2em;
     margin-bottom: 10%;
+}
+
+/***********CONTACT**********/
+
+.contact {
+    height: 100vh;
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30vw;
+    height: 100%;
+    padding-top: 3%;
+    padding-bottom: 10%;
+}
+
+.contact header {
+    height: 5vh;
+    font-size: 2em;
+    padding: 1%;
+}
+
+.contact a {
+    color: var(--second-color);
+}
+
+.contact h1 {
+    font-size: 2em;
+}
+
+.contact main {
+    padding-top: 5vh;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact button {
+    width: 40%;
+    align-self: flex-end;
+}
+
+.contact textarea {
+    resize: none;
+    width: 100%;
+}
+
+.contact input, .contact textarea {
+    border: 3px solid var(--second-color);
+    background-color: var(--main-color);
+}
+
+.contact input {
+    height: 5vh;
+    padding: 2%;
+}
+
+.contact textarea {
+    height: 25vh;
+}
+
+.contact ::placeholder {
+    color: var(--second-color);
+}
+
+.contact button {
+    background-color: var(--second-color);
+    color: var(--main-color);
+    height: 5vh;
+    border: none;
+    font-weight: bold;
+    font-size: 1em;
 }
