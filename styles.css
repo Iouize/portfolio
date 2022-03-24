@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
 * {
     text-decoration: none;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     list-style: none;
+    font-family: 'Roboto', sans-serif;;
 }
 
 img {
@@ -11,13 +14,18 @@ img {
 }
 
 :root {
-    --main-color : #B6DCB6;
-    --second-color : white;
+    --main-color : #F7A823;
+    --second-color : #417EC1;
+    --third-color : white;
 }
 
 ::selection {
-    background-color: var(--main-color);
-    color: var(--second-color);
+    background-color: var(--second-color);
+    color: var(--third-color);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /*********HOME**********/
@@ -25,26 +33,37 @@ img {
 .home {
     height: 100vh;
     background-color: var(--main-color);
-    color: var(--second-color);
+    color: var(--third-color);
 }
 
 .home nav {
-    padding-right: 2%;
+    padding-right: 4%;
     padding-top: 1.5%;
 }
 
 .home ul {
     display: flex;
     justify-content: flex-end;
-    gap: 2em;
+    gap: 3em;
 }
 
 .home li {
     font-size: 1.25em;
+    height: 5vh;
 }
 
 .home li a {
-    color : var(--second-color);
+    color : var(--third-color);
+}
+
+.home li:hover a {
+    color: var(--second-color);
+    transition: 0.2s;
+}
+
+.home li:hover {
+    border-bottom: 4px solid var(--second-color);
+    transition: 0.2s;
 }
 
 .home h1 {
@@ -53,6 +72,7 @@ img {
     flex-direction: column;
     padding-left: 15%;
     margin-top: 13%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .home i {
@@ -85,6 +105,55 @@ img {
     color : var(--main-color);
     font-size: 2em;
     margin-bottom: 10%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/**************BULLES*****************/
+
+.illustrationLouise {
+    cursor: pointer;
+}
+
+.bullesNavi {
+    position: absolute;
+    top: 150%;
+}
+
+.bulle {
+    position: relative;
+    width: 10vw;
+    z-index: 5;
+    display: none;
+}
+
+.hey {
+    position: absolute;
+    left: 5vw;
+    top: -28vh;
+}
+
+.look {
+    position: absolute;
+    left: 11vw;
+    top: -18vh;
+}
+
+.listen {
+    position: absolute;
+    left: 12vw;
+    top: -8vh;
+}
+
+.watch {
+    position: absolute;
+    left: -10vw;
+    top: -14vh;
+}
+
+.hello {
+    position: absolute;
+    left: -8vw;
+    top: -25vh;
 }
 
 /***********CONTACT**********/
@@ -92,7 +161,7 @@ img {
 .contact {
     height: 100vh;
     background-color: var(--main-color);
-    color: var(--second-color);
+    color: var(--third-color);
 }
 
 .contact form {
@@ -112,11 +181,12 @@ img {
 }
 
 .contact a {
-    color: var(--second-color);
+    color: var(--third-color);
 }
 
 .contact h1 {
     font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .contact main {
@@ -138,7 +208,7 @@ img {
 }
 
 .contact input, .contact textarea {
-    border: 3px solid var(--second-color);
+    border: 3px solid var(--third-color);
     background-color: var(--main-color);
 }
 
@@ -152,11 +222,11 @@ img {
 }
 
 .contact ::placeholder {
-    color: var(--second-color);
+    color: var(--third-color);
 }
 
 .contact button {
-    background-color: var(--second-color);
+    background-color: var(--third-color);
     color: var(--main-color);
     height: 5vh;
     border: none;
@@ -180,6 +250,7 @@ img {
     font-size: 2em;
     margin-top: 5%;
     margin-bottom: 5%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .friseFormations {
@@ -188,12 +259,20 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .formations .friseChrono {
     height: 1vh;
-    width: 60%;
+    width: 45%;
     background-color: var(--main-color);
+}
+
+.noms {
+    width: 45%;
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: space-around;
 }
 
 .boutonsFrise {
@@ -221,5 +300,97 @@ img {
     background-color: red;
     position: relative;
     top: -1vh;
+}
+
+.formationDescription {
+    position: relative;
+    top: 8%;
+    width: 100%;
+}
+
+
+.formationCard {
+    display: none;
+    width: 25vw;
+    background-color: #FBFCDF;
+    padding: 2%;
+    border-radius: 20px;
+    line-height: 1.5em;
+    position: relative;
+    box-shadow: 1px 4px 7px 0 rgba( 0, 0, 0, .4 );;
+}
+
+.formationCard li {
+    list-style-type: " - ";
+    list-style-position: inside;
+    padding-left: 5%;
+}
+
+
+.formationCard::before {
+    content: "";
+    height: 30px;
+    width: 30px;
+    background-color: #FBFCDF;
+    position: absolute;
+    top: -14px;
+    /*left: 6.5vw;*/
+    z-index: 2;
+    transform: rotate(-225deg);
+    /*box-shadow: -2px 0.5px 0.5px 0 rgba( 0, 0, 0, .2 );*/
+    border-bottom: 0.5px solid rgba( 0, 0, 0, .05 );
+    border-left: 0.5px solid rgba( 0, 0, 0, .05 );
+}
+
+.formationCard h3 {
+    color: var(--main-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.formationCard h4 {
+    color: #DE8195;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    /*font-weight: lighter;*/
+    font-size: 0.80em;
+}
+
+.formationCard h5 {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+
+.formationCard.bacS {
+    left: calc(29% - 4vw);
+}
+
+.formationCard.bacS::before {
+    /*position: absolute;*/
+    left: 7.25vw;
+}
+
+.formationCard.dutmmi {
+    left: calc(42% - 4vw);
+}
+
+.formationCard.dutmmi::before {
+    left: 5.5vw;
+}
+
+.formationCard.lpmiaw {
+    left: 45%;
+}
+
+.formationCard.lpmiaw::before {
+    left: 9.5vw;
+}
+
+.formationCard.ynov {
+    left: 50%;
+}
+
+.formationCard.ynov::before {
+    left: 16vw;
 }
 
