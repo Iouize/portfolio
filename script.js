@@ -3,37 +3,63 @@ const bleu = "#417EC1";
 const vert = "#A7F59B";
 const rose = "#F59AD9";
 
+const vert2 = "#64A859";
+const rose2 = "#A85991";
+const orange2 = "#AB6F07";
+const bleu2 = "#1C4775";
+
 const jspQuelCouleur = "#FFF59B";
 const couleurs = [
     [
         orange,
-        bleu
+        bleu,
+        orange2,
+        bleu2
     ],
     [
         bleu,
-        orange
+        orange,
+        bleu2,
+        orange2
     ],
     [
         vert,
-        rose
+        rose,
+        vert2,
+        rose2
     ],
     [
         rose,
-        vert
+        vert,
+        rose2,
+        vert2
     ]
 ];
 
-const couleurPrincipale = couleurs[Math.floor(Math.random()*couleurs.length)];
+function couleurAleatoire() {
+   const randomColor = couleurs[Math.floor(Math.random()*couleurs.length)];
+   return randomColor;
+}
+
+let couleurPrincipale = couleurAleatoire();
 
 let root = document.documentElement;
 
 let mainColor = couleurPrincipale[0];
-let secondColor = couleurPrincipale[1];
+let opositeColor = couleurPrincipale[1];
+let secondColor = couleurPrincipale[2];
+let opositeSecondColor = couleurPrincipale[3];
 
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', changeColors() );
+
+
+function changeColors(){
     root.style.setProperty('--main-color', mainColor);
+    root.style.setProperty('--oposite-color', opositeColor);
     root.style.setProperty('--second-color', secondColor);
-} );
+    root.style.setProperty('--secondOposite-color', opositeSecondColor);
+}
+
 
 /*FRISE CHRONOLOGIQUE */
 

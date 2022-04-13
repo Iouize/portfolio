@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Roboto&display=swap');
 
 * {
     text-decoration: none;
@@ -15,12 +15,14 @@ img {
 
 :root {
     --main-color : #F7A823;
-    --second-color : #417EC1;
+    --oposite-color : #417EC1;
+    --second-color : #64A859;
     --third-color : white;
+    --secondOposite-color : "#1C4775";
 }
 
 ::selection {
-    background-color: var(--second-color);
+    background-color: var(--oposite-color);
     color: var(--third-color);
 }
 
@@ -48,40 +50,66 @@ html {
 }
 
 .home li {
-    font-size: 1.25em;
+    font-size: 1.5em;
     height: 5vh;
 }
 
 .home li a {
     color : var(--third-color);
+    /*text-shadow: 1px 1px var(--second-color);*/
 }
 
 .home li:hover a {
-    color: var(--second-color);
+    color: var(--oposite-color);
     transition: 0.2s;
+    /*text-shadow: 1px 1px var(--secondOposite-color);*/
 }
 
-.home li:hover {
-    border-bottom: 4px solid var(--second-color);
-    transition: 0.2s;
+.home main {
+    padding-left: 5%;
+    margin-top: 10%;
 }
 
 .home h1 {
-    font-size: 5em;
-    display: flex;
-    flex-direction: column;
-    padding-left: 15%;
-    margin-top: 13%;
     font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--third-color);
+   /* letter-spacing: 0.25rem; */
+   /* text-shadow: 4px 4px var(--oposite-color), 8px 8px var(--secondOposite-color), 12px 12px var(--second-color);*/
 }
 
-.home i {
+.home .nom {
+    font-size: 6rem;
+}
+
+.home footer .moiBackground {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    width: 40%;
+}
+
+.home footer i {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: absolute;
     width: 100%;
     bottom: 0;
-    font-size: 1.25em;
+    font-size: 1.5em;
+    animation: move .75s infinite alternate linear;
+}
+
+@keyframes move {
+    0% {
+        bottom: 3px;
+    }
+    100% {
+        bottom: 1rem;
+    }
+
 }
 
 /**********QUI SUIS-JE*************/
@@ -106,6 +134,16 @@ html {
     font-size: 2em;
     margin-bottom: 10%;
     font-family: 'Montserrat', sans-serif;
+}
+
+.description p {
+    line-height: 1.5em;
+    margin-bottom: 2%;
+}
+
+.description a i {
+    color: var(--main-color);
+    font-size: 1.5em;
 }
 
 /**************BULLES*****************/
@@ -275,6 +313,12 @@ html {
     justify-content: space-around;
 }
 
+.noms p {
+    color: var(--second-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+
 .boutonsFrise {
     width: 100%;
     height: 100%;
@@ -312,7 +356,8 @@ html {
 .formationCard {
     display: none;
     width: 25vw;
-    background-color: #FBFCDF;
+    /*background-color: #FBFCDF;*/
+    background-color: #ffffee;
     padding: 2%;
     border-radius: 20px;
     line-height: 1.5em;
@@ -331,7 +376,8 @@ html {
     content: "";
     height: 30px;
     width: 30px;
-    background-color: #FBFCDF;
+    /*background-color: #FBFCDF;*/
+    background-color: #ffffee;
     position: absolute;
     top: -14px;
     /*left: 6.5vw;*/
@@ -348,7 +394,7 @@ html {
 }
 
 .formationCard h4 {
-    color: #DE8195;
+    color: var(--second-color);
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     /*font-weight: lighter;*/
