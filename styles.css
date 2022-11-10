@@ -432,11 +432,10 @@ html {
     left: 9.5vw;
 }
 
-.formationCard.ynov {
+.formationCard.simplon {
     left: 50%;
 }
 
-.formationCard.ynov::before {
+.formationCard.simplon::before {
     left: 16vw;
 }
-
